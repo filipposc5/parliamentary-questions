@@ -50,7 +50,7 @@ RUN    cd /usr/src/app  && \
 ####RUN GEM_HOME=/rails/vendor/bundle/ruby/2.3.0/ gem install bundler
 
 
-RUN chmod +x /run.sh /tini
+RUN chmod +x /tini
 
 
 CMD ["/run.sh"]
