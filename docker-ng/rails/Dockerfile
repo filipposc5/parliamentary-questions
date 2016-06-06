@@ -28,8 +28,8 @@ RUN apt-get update && \
     apt-get install apt-transport-https && \
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
     echo 'deb https://deb.nodesource.com/node jessie main' > /etc/apt/sources.list.d/nodesource.list && \
-    apt-get update && \
-    apt-get install -y graphviz nodejs
+    apt-get update
+RUN apt-get install -y graphviz nodejs cron
 # if you want "runit" instead of tiny, use the following line instead
 #    apt-get install -y graphviz runit nodejs
 
