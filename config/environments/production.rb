@@ -30,6 +30,7 @@ ParliamentaryQuestions::Application.configure do
   config.assets.compile = false
 
   config.assets.enabled = true
+  config.serve_static_files = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
