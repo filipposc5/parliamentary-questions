@@ -36,6 +36,7 @@ if [ -z "$APP_MASTER_SERVER" -o "$APPHOST" == "$APP_MASTER_SERVER" ]; then
         bundle exec rake db:import_transform[/tmp/dbimport] | tee -a /usr/src/app/log/unicorn.log 2>&1
     fi
 
+    bundle install
 
     echo "Master server: Running whenever"   | tee -a /usr/src/app/log/unicorn.log
     bundle exec whenever --update-crontab   2>&1 | tee -a /usr/src/app/log/unicorn.log
