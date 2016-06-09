@@ -36,6 +36,10 @@ class PqMailer < PQBaseMailer
     end
   end
 
+  def report_email(mail_data)
+    mail_with_subject('PQ Reconciliation Report', mail_data)
+  end
+
   private
 
   def mail_with_subject(subject, mail_data)
